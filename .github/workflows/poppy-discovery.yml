@@ -1,0 +1,10 @@
+name: Poppy discovery
+on:
+  pull_request:
+jobs:
+  poppy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Poppy discovery file exists
+        run: test -f app/.well-known/poppy.json/route.ts
